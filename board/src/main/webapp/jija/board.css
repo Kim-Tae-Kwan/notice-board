@@ -1,0 +1,187 @@
+body{
+    width: 1024px;
+    margin: 0px auto;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    align-items: center;
+    height: 50px;
+}
+header .title{
+    font-size: 25px;
+    font-weight: bold;
+}
+header .sign{
+	display: flex;
+	flex-direction: column;
+}
+header .sign .logout{
+	text-decoration: none;
+}
+header .sign .logout:hover{
+	text-decoration: underline;
+}
+
+header .user{
+	font-size: 20px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    margin: 0px;
+    line-height: 50px;
+    /* border: 1px solid black; */
+}
+
+nav ul li{
+    margin-right: 20px;
+}
+nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    
+    /* border: 1px solid black; */
+}
+nav ul li a:hover{
+    border-bottom: 4px solid darkgray;
+}
+nav ul li a.active{
+    border-bottom: 4px solid darkgray;
+}
+
+.sectionAndAside{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 10px; */
+}
+
+section{
+    padding: 20px;
+    width: 80%;
+}
+section .more{
+    margin-top: 30px;
+    padding: 12px 0 11px;
+    border: 1px solid #eee;
+    text-align: center;
+    font-size: 15px;
+    color: #999;
+    width: 100%;
+}
+section .posts .post-header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    align-items: center;
+}
+section .posts .post-header .post-num{
+    font-size: 20px;
+    padding: 15px;
+    display: block;
+}
+section .posts .post-header .post-num .num{
+    color: green;
+}
+section .posts .post-header .write{
+    height: 29px;
+    padding: 7px 14px 0;
+    border-radius: 1px;
+    border: 1px solid lightgray;
+    font-size: 12px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+section .posts .post-header .write:hover{
+    text-decoration: underline;
+}
+
+section .posts .item{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+section .posts .item a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+section .posts .item a:hover .title{
+    text-decoration: underline;
+}
+section .posts .item a .title{
+    font-size: 25px;
+}
+section .posts .item a .content,
+section .posts .item a .date{
+    font-size: 15px;
+    color: darkgray;
+}
+section .posts .item a .content{
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:3;
+    overflow: hidden;
+    margin: 10px 30px 10px 0px;
+    display: -webkit-box;
+    
+}
+
+aside{
+    width: 20%;
+}
+aside ul{
+    list-style: none;
+}
+aside a{
+    text-decoration: none;
+    color: black;
+}
+aside a:hover{
+    text-decoration: underline;
+}
+aside .catalog{}
+aside .catalog .large{
+    font-size: 18px;
+    font-weight: bold;
+}
+aside .catalog .middle{
+    font-weight: bold;
+    font-size: 15px;
+}
+aside .catalog .small{
+    margin: 10px 0px;
+    padding-left: 5px;
+    border-left: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+}
+aside .catalog .small li{
+    margin-bottom: 5px;
+}
+aside .catalog .small a{
+    font-size: 13px;
+    color: darkgray;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-top: 1px solid lightgray;
+}
+footer .email,
+footer .github{
+    color: black;
+}
+footer .github a{
+    text-decoration: none;
+    color: black;
+}
+footer .github a:hover{
+    text-decoration: underline;
+}

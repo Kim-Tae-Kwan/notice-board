@@ -1,0 +1,48 @@
+form{
+	display: flex;
+	flex-direction: column;
+}
+form .catalog{
+	width: 10%;
+}
+form textarea:focus{
+	outline: none;
+}
+form .title,
+form .content{
+	display: block;
+	margin: 10px 0; 
+    width: 100%;
+    border: none;
+    resize: none;
+    /* outline: 0 none; */
+    line-height: 40px;
+    overflow: hidden;
+}
+form .title{
+	height: 56px;
+    font-size: 30px;
+	
+}
+form .content{
+	height: 500px;
+    font-size: 15px;
+}
+form span{
+	border: 1px solid lightgray;
+}
+.actions{
+    display: flex;
+    justify-content: flex-end;
+}
+.actions .complete{
+    padding: 7px 14px;
+    border-radius: 1px;
+    border: 0px;
+    font-size: 12px;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: white;
+    margin-right: 5px;
+    background-color: blue;
+}

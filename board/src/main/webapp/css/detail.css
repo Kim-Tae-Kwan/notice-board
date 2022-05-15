@@ -1,0 +1,120 @@
+.detail-head{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    height: 100px;
+    padding: 50px 0px 50px 50px;
+    margin: 20px 1px;
+    border-radius: 10px;
+    background-image: url(../image/detail.jpg);
+    background-size: cover;
+    background-position-y: 25%;
+}
+.detail-head span{
+    display: block;
+}
+.detail-head .catalog{
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+.detail-head .title{
+    font-size: 30px;
+}
+.detail-head .meta{
+    font-size: 10px;
+    opacity: 0.5;
+    margin-top: 14px;
+}
+
+.actions{
+    display: flex;
+    justify-content: flex-end;
+}
+.actions .update,
+.actions .delete{
+    padding: 7px 14px;
+    border-radius: 1px;
+    border: 0px;
+    font-size: 12px;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: white;
+    margin-right: 5px;
+}
+.actions .update{
+    background-color: blue;
+}
+.actions .delete{
+    background-color: red;
+}
+
+.btn{
+	width: 100%;
+	height: 50px;
+	border: 1ps solid gray;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 50px;
+	text-decoration: none;
+	color: black;
+	display: block;
+	margin: 20px;
+}
+
+#popup-delete{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	left: 0px;
+	top: 0px;
+}
+#popup-delete>div{
+	width: 400px;
+	height: 200px;
+	padding: 50px;
+	margin: 250px auto;
+	background-color: white;
+	border-radius: 10px;
+}
+#popup-delete div .form{
+	display: flex;
+	flex-direction: column;
+}
+#popup-delete div .title{
+	font-weight: bold;
+	font-size : 20px;
+}
+#popup-delete div form .fail{
+	color: red;
+	display: none;
+}
+
+#popup-update{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	left: 0px;
+	top: 0px;
+}
+#popup-update>div{
+	width: 70%;
+    height: 80%;
+    padding: 40px;
+    margin: 100px auto;
+    background-color: white;
+    border-radius: 10px;
+}
+#popup-update div .control{
+	display: flex;
+	flex-direction: column;
+}
+#popup-update div .control #content{
+	height: 500px;
+}
+
+#popup-update div .actions{
+	margin-top: 5px;
+}

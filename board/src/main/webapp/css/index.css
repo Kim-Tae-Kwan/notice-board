@@ -1,0 +1,102 @@
+#header-menu>ul {
+    list-style: none;
+    height: 40px;
+    padding: 5px 1px;
+    margin: 0px;
+    border-bottom: 1px solid whitesmoke;
+}
+
+#header-menu>ul>li {
+    float: left;
+    margin: 5px 30px;
+    padding: 0px;
+}
+
+#header-menu>ul>li>a {
+    text-decoration: none;
+    color: black;
+
+}
+
+#header-menu>ul>li:hover {
+    border-bottom: 1px solid gray;
+}
+
+.container {
+    /* border: 1px solid black; */
+}
+
+.thum {
+    float: right;
+}
+
+.post .post-item {
+    padding: 50px;
+    /* border: 1px solid black; */
+}
+
+.post .post-item>a {
+    text-decoration: none;
+}
+
+.post .post-item>a>* {
+    color: black;
+}
+
+.post .post-item>a:hover h2 {
+    text-decoration: underline;
+
+}
+
+.post .post-item .meta {
+    display: block;
+    margin: 30px 0px;
+}
+
+.post .post-item .excerpt {
+    opacity: 0.7;
+}
+
+
+
+#footer {
+    border-top: 1px solid lightgray;
+    margin: 0 auto;
+}
+
+#footer .inner {
+    position: relative;
+    max-width: 1080px;
+    width: 500px;
+    margin: 0px auto;
+    /* padding: 10px; */
+    /* margin: 100px 50px;  */
+    /* padding: 32px 24px 26px; */
+    /* border: 1px solid aqua; */
+}
+
+#footer .inner .page-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    background: #fff url(./images/ico_package.png) no-repeat -100px -200px;
+    text-indent: -999em;
+}
+
+#footer .inner .meta,
+#footer .inner .copyright {
+    opacity: 0.9;
+}
+
+#footer .inner .copyright .github {
+    text-decoration: none;
+    color: black;
+}
+
+#footer .inner .copyright .github:hover {
+    text-decoration: underline;
+}

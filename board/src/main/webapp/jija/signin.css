@@ -1,0 +1,38 @@
+section{}
+section .title{
+	display: block;
+	width : 100%;
+	font-size: 15px;
+	text-align: center;
+	
+}
+section .form *{
+	display: block;
+	width: 90%;
+}
+
+section .form{
+	border: 1px solid lightgray;
+	background-color: gray;
+	display: flex;
+	flex-direction: column;
+	width:  400px;
+	margin: 0 auto;
+	padding: 0 auto;
+}
+section .form label{
+	
+}
+section .form #email{}
+section .form #password{}
+section .form button{
+	background-color: lightgreen;
+	boder : none;
+}
+section .signup{}
+section .signup a{
+	text-decoration: none;
+}
+section .signup a:hover{
+	text-decoration: underline;
+}
