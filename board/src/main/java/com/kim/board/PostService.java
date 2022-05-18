@@ -175,4 +175,46 @@ public class PostService {
 		}
 		return count;
 	}
+	
+	public int getTotaNlumber() throws SQLException {
+		String sql = "SELECT COUNT(*) FROM post";
+		int count = 0;
+		try {
+			conn = DBConnect.getConnection();
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery(sql);
+			if (rs.next()) {
+				count = rs.getInt(1);
+			}
+		} finally {
+			if (rs != null)
+				rs.close();
+			if (stmt != null)
+				stmt.close();
+			if (conn != null)
+				conn.close();
+		}
+		return count;
+	}
+	
+	public int getTotaNlumberByCatalog(int catalogId) throws SQLException {
+		String sql = "SELECT COUNT(*) FROM post where catalog_id = " + catalogId;
+		int count = 0;
+		try {
+			conn = DBConnect.getConnection();
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery(sql);
+			if (rs.next()) {
+				count = rs.getInt(1);
+			}
+		} finally {
+			if (rs != null)
+				rs.close();
+			if (stmt != null)
+				stmt.close();
+			if (conn != null)
+				conn.close();
+		}
+		return count;
+	}
 }

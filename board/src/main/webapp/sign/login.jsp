@@ -17,7 +17,7 @@ if(request.getMethod().equals("POST")){
 	UserService userService = new UserService();
 	
 	user.setEmail(request.getParameter("email").trim());
-	user.setPassword(request.getParameter("password").trim());
+	user.setPassword(request.getParameter("password").trim().replace("#", ""));
 	
 	user = userService.login(user);
 	

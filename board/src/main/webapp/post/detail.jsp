@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Post Detail</title>
 <link rel="stylesheet" href="../css/board.css">
 <link rel="stylesheet" href="../css/detail.css">
 <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
@@ -111,62 +111,64 @@ UserDto user = userService.getById(post.getUserId());
 CatalogDto catalog = catalogService.getById(post.getCatalogId());
 %>
 <body>
-	<jsp:include page="../template/header.jsp">
-		<jsp:param value=".." name="root" />
-	</jsp:include>
-	<div class="detail-head">
-		<span class="catalog"><%=catalog.getName()%></span>
-		<spna class="title"><%=post.getTitle()%></spna>
-		<span class="meta">by <%=user.getName()%> - <%=post.getCreateDate()%></span>
-	</div>
-	<div class="sectionAndAside">
-		<section>
-			<div class="actions">
-			<%
-			if(login.getUserId() == user.getId()){
-			%>
-				<button class="update">수정</button>
-				<button class="delete">삭제</button>
-			<%} %>
-			</div>
-			<%=toHTML(post.getContent())%>
-		</section>
-		<jsp:include page="../template/aside.jsp">
+	<div class="container">
+		<jsp:include page="../template/header.jsp">
 			<jsp:param value=".." name="root" />
 		</jsp:include>
-	</div>
-	<jsp:include page="../template/footer.jsp"></jsp:include>
-	<div id="popup-update">
-		<div>
-			<h2>수정 페이지</h2>
-			<form action="update.jsp" method="post">
-				<div class="control">
-					<input type="hidden" name="id" value="<%=post.getId()%>">
-					<label for="title">제목</label>
-					<input type="text" id="title" name="title" value="<%=post.getTitle() %>">
-					<label for="content">내용</label>
-					<textarea id="content" name="content"><%=post.getContent() %></textarea>
-				</div>
-				<div class="actions">
-					<button class="update">수정</button>
-					<button class="cancel" type="button">취소</button>
-				</div>
-			</form>
+		<div class="detail-head">
+			<span class="catalog"><%=catalog.getName()%></span>
+			<spna class="title"><%=post.getTitle()%></spna>
+			<span class="meta">by <%=user.getName()%> - <%=post.getCreateDate()%></span>
 		</div>
-	</div>
-	<div id="popup-delete">
-		<div>
-			<h2>삭제하시겠습니까?</h2>
-			<span>삭제할 <span class="title"><%=post.getTitle() %></span> 을/를 입력하시오.</span>
-			<form action="delete.jsp" method="post">
-				<input type="hidden" name="id" value="<%=post.getId()%>">
-				<input class="confirm" type="text" placeholder="Please write a title">
-				<span class="fail">제목이 일치하지 않습니다.</span></p>
+		<div class="sectionAndAside">
+			<section>
 				<div class="actions">
+				<%
+				if(login.getUserId() == user.getId()){
+				%>
+					<button class="update">수정</button>
 					<button class="delete">삭제</button>
-					<button class="cancel" type="button">취소</button>
+				<%} %>
 				</div>
-			</form>
+				<%=toHTML(post.getContent())%>
+			</section>
+			<jsp:include page="../template/aside.jsp">
+				<jsp:param value=".." name="root" />
+			</jsp:include>
+		</div>
+		<jsp:include page="../template/footer.jsp"></jsp:include>
+		<div id="popup-update">
+			<div>
+				<h2>수정 페이지</h2>
+				<form action="update.jsp" method="post">
+					<div class="control">
+						<input type="hidden" name="id" value="<%=post.getId()%>">
+						<label for="title">제목</label>
+						<input type="text" id="title" name="title" value="<%=post.getTitle() %>">
+						<label for="content">내용</label>
+						<textarea id="content" name="content"><%=post.getContent() %></textarea>
+					</div>
+					<div class="actions">
+						<button class="update">수정</button>
+						<button class="cancel" type="button">취소</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="popup-delete">
+			<div>
+				<h2>삭제하시겠습니까?</h2>
+				<span>삭제할 <span class="title"><%=post.getTitle() %></span> 을/를 입력하시오.</span>
+				<form action="delete.jsp" method="post">
+					<input type="hidden" name="id" value="<%=post.getId()%>">
+					<input class="confirm" type="text" placeholder="Please write a title">
+					<span class="fail">제목이 일치하지 않습니다.</span></p>
+					<div class="actions">
+						<button class="delete">삭제</button>
+						<button class="cancel" type="button">취소</button>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 </body>

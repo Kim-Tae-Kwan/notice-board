@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Post Write</title>
 <link rel="stylesheet" href="../css/board.css">
 <link rel="stylesheet" href="../css/write.css">
 <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
@@ -43,30 +43,32 @@ $(function(){
 	ArrayList<CatalogDto> list = catalogService.getAll();
 %>
 <body>
-	<jsp:include page="../template/header.jsp">
-		<jsp:param value=".." name="root" />
-	</jsp:include>
-	<div class="sectionAndAside">
-		<section>
-			<form action="add.jsp" method="post">
-				<input type="hidden" name="user-id" value="<%=login.getUserId()%>">
-				<select class="catalog" name="catalog-id">
-					<%
-					for(CatalogDto catalog : list){
-					%>
-						<option value="<%=catalog.getId()%>"><%=catalog.getName() %></option>
-					<%} %>
-				</select>
-				<textarea class="title" name="title" placeholder="제목을 입력하세요"></textarea>
-				<span></span>
-				<textarea class="content" name="content" placeholder="내용을 입력하세요"></textarea>
-				<div class="actions">
-					<button class="complete">완료</button>
-					<button class="cancel" type="button">취소</button>
-				</div>
-			</form>
-		</section>
+	<div class="container">
+		<jsp:include page="../template/header.jsp">
+			<jsp:param value=".." name="root" />
+		</jsp:include>
+		<div class="sectionAndAside">
+			<section>
+				<form action="add.jsp" method="post">
+					<input type="hidden" name="user-id" value="<%=login.getUserId()%>">
+					<select class="catalog" name="catalog-id">
+						<%
+						for(CatalogDto catalog : list){
+						%>
+							<option value="<%=catalog.getId()%>"><%=catalog.getName() %></option>
+						<%} %>
+					</select>
+					<textarea class="title" name="title" placeholder="제목을 입력하세요"></textarea>
+					<span></span>
+					<textarea class="content" name="content" placeholder="내용을 입력하세요"></textarea>
+					<div class="actions">
+						<button class="complete">완료</button>
+						<button class="cancel" type="button">취소</button>
+					</div>
+				</form>
+			</section>
+		</div>
+		<jsp:include page="../template/footer.jsp"></jsp:include>
 	</div>
-	<jsp:include page="../template/footer.jsp"></jsp:include>
 </body>
 </html>

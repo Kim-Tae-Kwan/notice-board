@@ -55,4 +55,21 @@ public class CatalogService {
 		}
 		return catalog;
 	}
+	
+	public void insert(String name) throws SQLException {
+		String sql = "INSERT INTO catalog (name) VALUES ('"
+						+ name + "')";
+		try {
+			conn = DBConnect.getConnection();
+			stmt = conn.createStatement();
+			stmt.executeUpdate(sql);
+		} finally {
+			if (rs != null)
+				rs.close();
+			if (stmt != null)
+				stmt.close();
+			if (conn != null)
+				conn.close();
+		}
+	}
 }

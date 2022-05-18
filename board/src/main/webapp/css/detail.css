@@ -72,7 +72,7 @@
 }
 #popup-delete>div{
 	width: 400px;
-	height: 200px;
+	height: 100px;
 	padding: 50px;
 	margin: 250px auto;
 	background-color: white;
@@ -113,6 +113,7 @@
 }
 #popup-update div .control #content{
 	height: 500px;
+	resize: none;
 }
 
 #popup-update div .actions{

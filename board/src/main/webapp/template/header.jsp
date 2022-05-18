@@ -11,7 +11,12 @@
 	ArrayList<CatalogDto> list =catalogService.getAll();
 %>
 <header>
-	<span class="title">내삶발전기록용</span>
+	<div class="logo">
+		<a href="<%=path %>/">
+			<img alt="" src="<%=path %>/image/main_logo.png">
+		</a>
+	</div>
+	
 	<div class="sign">
 		<%
 		if(login.getResult()){	
@@ -33,6 +38,10 @@
 		%>
 		<li><a href="<%=path %>/?catalog=<%=catalog.getId()%>"><%=catalog.getName() %></a></li>
 		<%} %>
-		
+		<%
+		if(login.getResult()){
+		%>
+		<li><a class="add" href="<%=path %>/">+</a></li>
+		<%} %>
 	</ul>
 </nav>
